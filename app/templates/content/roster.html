@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% set title="Roster" %}
+{% block content %}
+    <br>
+    <h2>Team Roster</h2>
+    <hr>
+    <div class = "container">
+        <div class = "row justify-content-center">
+            <div class = "col-3">
+                <ul class = "list-group">
+                    {% for person in roster %}
+                        <li class = "list-group-item">{{ person }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

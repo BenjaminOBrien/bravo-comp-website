@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8" />
+
+        <!-- CSS -->
+        <link href = "/s/css/bootstrap.css" rel = "stylesheet">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+            /* Elements */
+            body {
+                font-family: "Roboto", sans-serif;
+            }
+            nav {
+                color: #d3d3d3;
+                background-color: #0000cd;
+            }
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+
+            /* IDs */
+            #content {
+                text-align: center;
+            }
+
+            /* Classes */
+            a.nav-link { color: #d3d3d3; }
+            ul.dropdown-menu li a.nav-link { color: black; }
+            .round-image { border: 0px solid; border-radius: 5px; }
+            .mgr { margin-top: 25px; }
+        </style>
+
+        <link rel = "shortcut icon" href = "/s/favicon.png" type = "image/png">  
+        <title>{{ title }} · Bravo Company Seals</title>
+    </head>
+    <body>
+        
+        <!-- Navbar -->
+        <nav class = "navbar navbar-expand-lg">
+            <a class = "navbar-brand" href = "/">
+                <img src = "/s/img/njrotc.png" alt = "" width = "24" height = "30">
+            </a>
+            <div class = "collapse navbar-collapse">
+                <ul class = "navbar-nav mr-auto">
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "/">Index</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "/about">About</a>
+                    </li>
+                    <li class = "nav-item">
+                        <li class = "dropdown">
+                            <a class = "nav-link dropdown-toggle" data-toggle = "dropdown" href>Extra Info <span class = "caret"></span></a>
+                            <ul class = "dropdown-menu">
+                                <li><a class = "nav-link dropdown-link" href = "/roster">Team Roster</a></li>
+                                <li><a class = "nav-link dropdown-link" href = "#">Marketing Presentation</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page content -->
+        <div id = "content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+        <script src = "/s/js/bootstrap.js"></script>
+    </body>
+</html>
