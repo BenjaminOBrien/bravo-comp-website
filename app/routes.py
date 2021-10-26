@@ -23,6 +23,10 @@ def roster():
 def about_us():
     return render_template("content/about.html"), 200
 
+@app.route("/marketing")
+def marketing():
+    return render_template("content/marketing.html"), 200
+
 # Static files
 @app.route("/s/<path:path>")
 def get_static_file(path):
